@@ -1,0 +1,33 @@
+/* ==========================================================================
+   THEME: Grimoire
+   Colors and fonts for the whole site. To use this theme, make sure
+   css/theme.css contains:  @import url("themes/grimoire.css");
+   Copy this file to make your own theme and tweak the values.
+   ========================================================================== */
+
+/* Fonts for this theme. This line must stay first in the file. */
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Lora:ital,wght@0,400;0,600;1,400&display=swap");
+
+:root {
+  color-scheme: dark;
+  --bg: #14100c;
+  --panel: #1f1812;
+  --panel-2: #2a2017;
+  --line: #4a3a28;
+  --fg: #eadfc8;
+  --dim: #b09f80;
+  --accent: #d0583c;
+  --accent-2: #c89b4a;
+  --accent-ink: #1a0d08;
+  --font-display: 'IM Fell English SC', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-ui: 'Lora', Georgia, serif;
+  --h-case: none;
+  --h-track: 0.03em;
+  --h-weight: 400;
+  --radius: 2px;
+  --body-size: 1.05rem;
+  --page-bg: radial-gradient(1100px 600px at 50% 0%, #2a1e12 0%, transparent 70%);
+  --card-shadow: inset 0 0 0 3px var(--panel), inset 0 0 0 4px var(--line);
+  --card-top: 1px solid var(--line);
+}

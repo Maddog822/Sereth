@@ -1,0 +1,33 @@
+/* ==========================================================================
+   THEME: Obsidian & Gold
+   Colors and fonts for the whole site. To use this theme, make sure
+   css/theme.css contains:  @import url("themes/obsidian.css");
+   Copy this file to make your own theme and tweak the values.
+   ========================================================================== */
+
+/* Fonts for this theme. This line must stay first in the file. */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap");
+
+:root {
+  color-scheme: dark;
+  --bg: #100f0d;            /* page background */
+  --panel: #181613;         /* cards and panels */
+  --panel-2: #211e19;       /* raised surfaces, inputs */
+  --line: #332e26;          /* borders and dividers */
+  --fg: #e9e3d6;            /* main text */
+  --dim: #a29a88;           /* secondary text */
+  --accent: #c9a24b;        /* links, highlights */
+  --accent-2: #8c6d2a;      /* quieter accent */
+  --accent-ink: #17120a;    /* text on top of accent */
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Crimson Pro', Georgia, serif;
+  --font-ui: 'Crimson Pro', Georgia, serif;
+  --h-case: uppercase;
+  --h-track: 0.08em;
+  --h-weight: 700;
+  --radius: 6px;
+  --body-size: 1.15rem;
+  --page-bg: radial-gradient(900px 420px at 50% -8%, #2b2213 0%, transparent 70%);
+  --card-shadow: none;
+  --card-top: 1px solid var(--line);
+}

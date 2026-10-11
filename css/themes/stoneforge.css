@@ -1,0 +1,33 @@
+/* ==========================================================================
+   THEME: Stoneforge
+   Colors and fonts for the whole site. To use this theme, make sure
+   css/theme.css contains:  @import url("themes/stoneforge.css");
+   Copy this file to make your own theme and tweak the values.
+   ========================================================================== */
+
+/* Fonts for this theme. This line must stay first in the file. */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Barlow:wght@400;500;600&display=swap");
+
+:root {
+  color-scheme: dark;
+  --bg: #121415;
+  --panel: #1a1d1f;
+  --panel-2: #23272a;
+  --line: #363c40;
+  --fg: #dfe3e4;
+  --dim: #8e999e;
+  --accent: #e2762f;
+  --accent-2: #7fa3a8;
+  --accent-ink: #1a0e05;
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', system-ui, sans-serif;
+  --font-ui: 'Barlow', system-ui, sans-serif;
+  --h-case: uppercase;
+  --h-track: 0.06em;
+  --h-weight: 700;
+  --radius: 0px;
+  --body-size: 1.05rem;
+  --page-bg: linear-gradient(180deg, #1b1e20 0%, transparent 420px);
+  --card-shadow: none;
+  --card-top: 3px solid var(--accent);
+}

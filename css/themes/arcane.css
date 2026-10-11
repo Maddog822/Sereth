@@ -1,0 +1,34 @@
+/* ==========================================================================
+   THEME: Arcane Night
+   Colors and fonts for the whole site. To use this theme, make sure
+   css/theme.css contains:  @import url("themes/arcane.css");
+   Copy this file to make your own theme and tweak the values.
+   ========================================================================== */
+
+/* Fonts for this theme. This line must stay first in the file. */
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap");
+
+:root {
+  color-scheme: dark;
+  --bg: #0b0b1a;
+  --panel: #13132a;
+  --panel-2: #1b1b3a;
+  --line: #2c2c55;
+  --fg: #e4e4f5;
+  --dim: #9a9ac4;
+  --accent: #a58bff;
+  --accent-2: #5fd0e0;
+  --accent-ink: #0d0b22;
+  --font-display: 'Marcellus', Georgia, serif;
+  --font-body: 'Spectral', Georgia, serif;
+  --font-ui: 'Spectral', Georgia, serif;
+  --h-case: none;
+  --h-track: 0.02em;
+  --h-weight: 400;
+  --radius: 10px;
+  --body-size: 1.05rem;
+  --page-bg: radial-gradient(1000px 500px at 80% -10%, #25205a 0%, transparent 65%),
+             radial-gradient(700px 400px at 0% 10%, #10264a 0%, transparent 60%);
+  --card-shadow: none;
+  --card-top: 1px solid var(--line);
+}

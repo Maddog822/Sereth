@@ -170,7 +170,7 @@ window.SCHEMAS = (function () {
     npcs: {
       plural: 'NPCs', singular: 'NPC', file: 'npcs.html',
       blurb: 'The people your characters meet, trust and fear.',
-      filterBy: { key: 'role', label: 'Role' },
+      filterBy: { key: 'tags', label: 'Tag' },
       cardMeta: ['role', 'race'],
       sections: [
         { title: 'At a Glance', fields: [

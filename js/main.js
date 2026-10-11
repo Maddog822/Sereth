@@ -293,7 +293,8 @@
       .slice().sort((a, b) => String(a.name).localeCompare(String(b.name)));
 
     const fk = schema.filterBy && schema.filterBy.key;
-    const values = fk ? Array.from(new Set(items.map(i => i[fk]).filter(Boolean))) : [];
+    const asArr = v => Array.isArray(v) ? v : (v ? [v] : []);
+const values = fk ? Array.from(new Set(items.flatMap(i => asArr(i[fk])))).sort() : [];
 
     app.innerHTML =
       '<div class="container">' +
@@ -313,7 +314,7 @@
     const draw = () => {
       const q = $('#list-filter').value.trim().toLowerCase();
       const shown = items.filter(i => {
-        if (chipVal && i[fk] !== chipVal) return false;
+        if (chipVal && !asArr(i[fk]).includes(chipVal)) return false;
         if (!q) return true;
         return [i.name, i.tagline, (i.tags || []).join(' '), (i.aliases || []).join(' ')].join(' ').toLowerCase().indexOf(q) !== -1;
       });

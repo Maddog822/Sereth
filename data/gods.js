@@ -1,18 +1,42 @@
 /* ==========================================================================
-   GODS AND ASPECTS
-   "kind" groups the cards on the page (Deity, Elemental Vestige, ...).
-
-   TEMPLATE
-   {
-     id: "short-id", name: "Name", tagline: "", summary: ``, tags: [], secret: false,
-     kind: "Deity", titles: "", domain: "", alignment: "", symbol: "", flight: "",
-     worshippers: [],      // nation ids
-     clergy: ``, tenets: [], holyDays: [],
-     myth: ``,
-     relations: [ { who: "[[id]]", why: "" } ],
-     dm: ``, questions: []
-   },
-   ========================================================================== */
+   GOD TEMPLATE   (paste at the top of data/gods.js)
+   ==========================================================================
+{
+  // ---- Basics ----
+  id: "unique-lowercase-id",
+  name: "",
+  tagline: "",
+  summary: ``,
+  tags: [],
+  aliases: [],
+  image: "",
+  secret: false,
+ 
+  // ---- Overview ----
+  kind: "Deity",                     // Deity | Elemental Vestige | ... (the filter buttons use this)
+  titles: "",
+  domain: "",
+  alignment: "",
+  symbol: "",
+  flight: "",                        // dragon flight, for aspects
+ 
+  // ---- Worship ----
+  worshippers: [],                   // ids of nations or factions
+  clergy: ``,
+  tenets: [],
+  holyDays: [],
+ 
+  // ---- Myth ----
+  myth: ``,                          // what people believe
+  relations: [
+    { who: "[[other-id]]", why: "" } // relations with other powers
+  ],
+ 
+  // ---- DM only ----
+  dm: ``,
+  questions: []
+},
+*/
 window.SERETH = window.SERETH || {};
 
 SERETH.gods = [

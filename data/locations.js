@@ -1,16 +1,35 @@
 /* ==========================================================================
-   IMPORTANT LOCATIONS
-   TEMPLATE
-   {
-     id: "short-id", name: "Name", tagline: "", summary: ``, tags: [], secret: false,
-     type: "City",           // City, Fortress, Ruin, Region, Landmark ...
-     region: "",
-     controlledBy: [],       // ids of nations or factions
-     description: ``, importance: ``,
-     features: [], dangers: [], notableNpcs: [], rumors: [],
-     dm: ``, questions: []
-   },
-   ========================================================================== */
+   LOCATION TEMPLATE   (paste at the top of data/locations.js)
+   ==========================================================================
+{
+  // ---- Basics ----
+  id: "unique-lowercase-id",
+  name: "",
+  tagline: "",
+  summary: ``,
+  tags: [],
+  aliases: [],
+  image: "",
+  secret: false,
+ 
+  // ---- Overview ----
+  type: "",                          // City, Fortress, Ruin, Region, Landmark... (filter buttons use this)
+  region: "",
+  controlledBy: [],                  // ids of nations or factions
+  description: ``,
+  importance: ``,
+ 
+  // ---- Details ----
+  features: [],
+  dangers: [],
+  notableNpcs: [],                   // ids of NPCs
+  rumors: [],
+ 
+  // ---- DM only ----
+  dm: ``,
+  questions: []
+},
+*/
 window.SERETH = window.SERETH || {};
 
 SERETH.locations = [

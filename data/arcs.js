@@ -1,18 +1,37 @@
 /* ==========================================================================
-   STORY ARCS
-   The four arc ideas your players choose between. The titles are WORKING
-   TITLES: rename them freely (keep the id, or update links that use it).
-
-   TEMPLATE
-   {
-     id: "short-id", name: "Title", tagline: "", summary: ``, tags: [], secret: false,
-     status: "Player choice",     // Player choice | Active | Completed | Shelved
-     hook: ``, premise: ``, stakes: ``,
-     beats: [], keyNpcs: [], keyLocations: [], keyFactions: [],
-     rewards: [],
-     dm: ``, questions: []
-   },
-   ========================================================================== */
+   STORY ARC TEMPLATE   (paste at the top of data/arcs.js)
+   ==========================================================================
+{
+  // ---- Basics ----
+  id: "unique-lowercase-id",
+  name: "",
+  tagline: "",
+  summary: ``,
+  tags: [],
+  aliases: [],
+  image: "",
+  secret: false,
+ 
+  // ---- Overview ----
+  status: "Player choice",           // Player choice | Active | Completed | Shelved
+  hook: ``,
+  premise: ``,
+  stakes: ``,
+ 
+  // ---- What the Table Will Do ----
+  beats: [],                         // key activities
+  keyNpcs: [],                       // ids
+  keyLocations: [],                  // ids
+  keyFactions: [],                   // ids of factions or nations
+ 
+  // ---- Rewards ----
+  rewards: [],
+ 
+  // ---- DM only ----
+  dm: ``,
+  questions: []
+},
+*/
 window.SERETH = window.SERETH || {};
 
 SERETH.arcs = [

@@ -1,50 +1,95 @@
 /* ==========================================================================
-   NATIONS
-   To add a nation: copy the TEMPLATE below, paste it at the end of the list
-   (add a comma after the previous entry), change the id, and fill in what you
-   know. Leave out any field you haven't decided, and write the gaps into
-   "questions" so you remember them (questions only show in DM view).
-
-   TEMPLATE (delete the lines you don't need)
-   {
-     id: "short-lowercase-id",          // used in links: [[short-lowercase-id]]
-     name: "Display Name",
-     tagline: "One line shown on the card.",
-     summary: "A paragraph shown at the top of the page.",
-     tags: ["Tag one", "Tag two"],
-     secret: false,                     // true = hidden from players
-
-     // Overview
-     background: ``, officialName: "", commonName: "", people: "", capital: "",
-     population: "", languages: "", religion: "", values: "",
-     // Geography
-     region: "", climate: "", terrain: "", features: [], resources: [], cities: [],
-     // Government
-     govType: "", ruler: "", politics: "", stability: "Stable",   // Stable | Tense | Divided | Civil War
-     // Military
-     armyName: "", structure: "", size: "", elite: "", style: "", forts: "", conflicts: "",
-     // Economy
-     strength: "", industries: [], exports: [], imports: [], partners: [],
-     // Culture and Society
-     identity: "", socialStructure: "", cultureValues: "", taboos: [], customs: [],
-     // Magic and Technology
-     magicPresence: "Moderate",         // Low | Moderate | High | Extremely High
-     commonMagic: "", magicInstitutions: "", uniqueMagic: "", techLevel: "", magicalResources: "",
-     magicAttitude: "Regulated",        // Revered | Feared | Regulated | Commercialized | Forbidden
-     // Foreign Relations (each row: who = nation, why = reason)
-     allies: [ { who: "[[other-id]]", why: "" } ],
-     rivals: [], enemies: [], neutral: [],
-     // History
-     founding: ``,
-     historyEvents: [ { year: "ES 100", event: "", why: "" } ],
-     recentHistory: ``,
-     // Important Locations (ids from locations.js)
-     locations: [],
-     // DM only
-     dm: ``,
-     questions: [ "What is ...?" ]
-   },
-   ========================================================================== */
+   NATION TEMPLATE   (paste at the top of data/nations.js)
+   ==========================================================================
+{
+  // ---- Basics ----
+  id: "unique-lowercase-id",
+  name: "",
+  tagline: "",
+  summary: ``,
+  tags: [],
+  aliases: [],
+  image: "",
+  secret: false,
+ 
+  // ---- Overview ----
+  background: ``,
+  officialName: "",
+  commonName: "",
+  people: "",                        // name of the people, e.g. "Dwarves"
+  capital: "",
+  population: "",                    // size / population
+  languages: "",
+  religion: "",                      // major religion
+  values: "",
+ 
+  // ---- Geography ----
+  region: "",
+  climate: "",
+  terrain: "",
+  features: [],                      // major geographic features
+  resources: [],                     // important resources
+  cities: [],                        // major cities
+ 
+  // ---- Government ----
+  govType: ``,                       // type / structure
+  ruler: ``,                         // ruler / succession
+  politics: ``,                      // political factions / issues
+  stability: "Stable",               // Stable | Tense | Divided | Civil War
+ 
+  // ---- Military ----
+  armyName: "",
+  structure: ``,
+  size: "",
+  elite: ``,                         // elite forces
+  style: "",                         // magic / warriors / machines
+  forts: ``,
+  conflicts: ``,                     // current conflicts
+ 
+  // ---- Economy ----
+  strength: ``,                      // economic strength
+  industries: [],
+  exports: [],
+  imports: [],
+  partners: [],                      // trade partners
+ 
+  // ---- Culture and Society ----
+  identity: ``,
+  socialStructure: ``,
+  cultureValues: ``,                 // values (shown in the Culture section)
+  taboos: [],
+  customs: [],
+ 
+  // ---- Magic and Technology ----
+  magicPresence: "Moderate",         // Low | Moderate | High | Extremely High
+  commonMagic: ``,
+  magicInstitutions: ``,
+  uniqueMagic: ``,
+  techLevel: "",
+  magicalResources: ``,
+  magicAttitude: "Regulated",        // Revered | Feared | Regulated | Commercialized | Forbidden
+ 
+  // ---- Foreign Relations (who = a nation or faction, why = the reason) ----
+  allies:  [ { who: "[[other-id]]", why: "" } ],
+  rivals:  [ { who: "[[other-id]]", why: "" } ],
+  enemies: [ { who: "[[other-id]]", why: "" } ],
+  neutral: [ { who: "[[other-id]]", why: "" } ],
+ 
+  // ---- History ----
+  founding: ``,
+  historyEvents: [
+    { year: "ES 0", event: "", why: "" }     // why = why it mattered
+  ],
+  recentHistory: ``,
+ 
+  // ---- Important Locations (ids from data/locations.js) ----
+  locations: [],
+ 
+  // ---- DM only ----
+  dm: ``,
+  questions: []
+},
+*/
 window.SERETH = window.SERETH || {};
 
 SERETH.nations = [
@@ -101,15 +146,16 @@ SERETH.nations = [
     ]
   },
 
-  /* ----------------------------------------------------- TWIN THEOCRACY */
+  /* ----------------------------------------------------- SOLUNARIS */
   {
-    id: "twin-theocracy",
-    name: "The Twin Theocracy",
+    id: "solunaris",
+    name: "Solunaris",
     tagline: "A nation that worships the sun and moon twins and treats unsanctioned magic as sacrilege.",
-    summary: `The Twin Theocracy worships [[solyara]] and [[lunaris]], the twin sun and moon gods, as its supreme deities. It believes magic should be given only by the gods, and only to the worthy.`,
+    summary: `The Divine Kingdom of Solunaris worships [[solyara]] and [[lunaris]], the twin sun and moon gods, as its supreme deities. It believes magic should be given only by the gods, and only to the worthy.`,
     tags: ["Theocracy", "Religion"],
 
-    religion: "[[solyara]] and [[lunaris]], the twin gods of sun and moon.",
+    capital: "Celestine Spire",
+    religion: "The Duality of [[solyara]] and [[lunaris]], the twin gods of sun and moon.",
     govType: "A theocracy ruled in the name of the twins.",
     magicAttitude: "Forbidden",
     commonMagic: "Divine magic granted by the twins to the worthy.",
@@ -179,13 +225,20 @@ SERETH.nations = [
   {
     id: "ashkhar-dominion",
     name: "The Ashkhar Dominion",
-    tagline: "Orc clans of the Red Wastes uniting under a charismatic warlord.",
-    summary: `The Khaz-Ruun Horde was the orcs' greatest civilization until a devastating war with the High Elves shattered it. After centuries of exile and wandering, the orc clans of the Red Wastes are uniting under a charismatic warlord. The Dominion embodies lost glory, survival and the rekindling of orcish pride.`,
+    tagline: "Orc clans of the Red Wastes uniting under a single warlord.",
+    summary: `The city of Gor'Thrak was the orcs' greatest civilization until a devastating war with the Elves shattered it. The rivalry traces back to the gods: Corellon poisoned Gruumsh with a slash to the eye, leaving the orc god consumed by rage and the orcs without a homeland. Cut off from a divine caretaker, the orcs lost the ability to cultivate plants and turned to roaming and raiding (the grey orcs). As part of Gruumsh's mind slowly recovered, some orcs regained the ability to create and farm (the green orcs). After centuries of exile, the clans of the Red Wastes are uniting under a charismatic warlord. The Dominion stands for lost glory, survival, and the rekindling of orcish pride.`,
     tags: ["Orcs", "Red Wastes"],
+    officialname: "The Ashkhar Dominion",
+    commonname: "The Dominion, outsiders still call it The Horde ",
+    capital: "The Spearfall",
 
-    people: "Orcs",
+    people: "Orcs and Verdant Orcs",
     region: "The Red Wastes",
+    climate: "Arid, with scorching days and bitter nights, typical of wastelands.",
+    terrain: "Rocky deserts and sparse grasslands.",
     govType: "A rising clan confederation under a warlord.",
+    ruler: "High Chief Rukhar Ashkhar",
+    politicalStructure: "Clan-based hierarchy under the High Chief.",
     stability: "Tense",
     locations: ["red-wastes"],
 

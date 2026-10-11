@@ -24,7 +24,7 @@ SERETH.npcs = [
 
     // At a glance
     race: "Dwarf",
-    age: "Middle-aged",
+    age: "Elder",
     role: "Guildmaster",
     affiliations: ["Vent Wardens"],
     locations: ["khardrum-city"],

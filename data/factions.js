@@ -130,15 +130,64 @@ SERETH.factions = [
   },
 
   /* -------------------------------------------------------- ELEMENTAL TRIBES */
+  /* -------------------------------------------------------- NATURE TRIBES */
   {
-    id: "elemental-tribes",
-    name: "The Elemental Tribes",
-    tagline: "Four tribes of air, fire, nature and water, guarding the elemental sparks.",
-    summary: `The tribes live in regions with strong elemental energy. Their members are genasi and other races, such as tritons for the water tribe. They are charged with protecting the elemental sparks, weapons forged from the elemental planes themselves.`,
+    id: "mosswardens",
+    name: "The Mosswardens",
+    tagline: "A nature tribe guarding the elemental spark of the forest.",
+    summary: `The Mosswardens live in Thornveil Forest after being removed from Thrakwood. Their members are genasi and dryads. They are charged with protecting the elemental spark of the forest, a weapon forged from the elemental planes themselves (The Verdant Spear).`,
     tags: ["Genasi", "Elemental sparks"],
-    type: "Four tribes",
-    specialties: ["Air", "Fire", "Nature", "Water"],
-    dm: `Along with the keepers, the tribes work to stop the dragon aspects from ever waking. See [[kronvaldyr]] and the other Elemental Vestiges.`,
+    type: "Elemental tribe",
+    specialties: ["Nature"],
+    dm: `Along with the keepers, the tribes work to stop the dragon aspects from ever waking. See [[flourander]] and the other Elemental Vestiges.`,
+    questions: [
+      "Where is each tribe's homeland?",
+      "What is each spark, and where is it kept?",
+      "Who leads each tribe?"
+    ]
+  },
+  /* -------------------------------------------------------- FIRE TRIBES */
+  {
+    id: "emberkin",
+    name: "The Emberkin",
+    tagline: "A fire tribe guarding the elemental spark of the fire.",
+    summary: `The Emberkin live in Mount Dravokar. Their members are genasi and **. They are charged with protecting the elemental spark of the fire, a weapon forged from the elemental planes themselves.`,
+    tags: ["Genasi", "Elemental sparks"],
+    type: "Elemental tribe",
+    specialties: ["Fire"],
+    dm: `Along with the keepers, the tribes work to stop the dragon aspects from ever waking. See [[flourander]] and the other Elemental Vestiges.`,
+    questions: [
+      "Where is each tribe's homeland?",
+      "What is each spark, and where is it kept?",
+      "Who leads each tribe?"
+    ]
+  },
+  /* -------------------------------------------------------- AIR TRIBES */
+  {
+    id: "windcallers",
+    name: "The Windcallers",
+    tagline: "A wind tribe guarding the elemental spark of the air.",
+    summary: `The Windcallers live in the Skyreach Peaks. Their members are genasi and **. They are charged with protecting the elemental spark of the air, a weapon forged from the elemental planes themselves.`,
+    tags: ["Genasi", "Elemental sparks"],
+    type: "Elemental tribe",
+    specialties: ["Air"],
+    dm: `Along with the keepers, the tribes work to stop the dragon aspects from ever waking. See [[flourander]] and the other Elemental Vestiges.`,
+    questions: [
+      "Where is each tribe's homeland?",
+      "What is each spark, and where is it kept?",
+      "Who leads each tribe?"
+    ]
+  },
+  /* -------------------------------------------------------- WATER TRIBES */
+  {
+    id: "deepcallers",
+    name: "The Deepcallers",
+    tagline: "A water tribe guarding the elemental spark of the water.",
+    summary: `The Deepcallers live in the Abyssal Trench. Their members are genasi and **. They are charged with protecting the elemental spark of the water, a weapon forged from the elemental planes themselves.`,
+    tags: ["Genasi", "Elemental sparks"],
+    type: "Elemental tribe",
+    specialties: ["Water"],
+    dm: `Along with the keepers, the tribes work to stop the dragon aspects from ever waking. See [[flourander]] and the other Elemental Vestiges.`,
     questions: [
       "Where is each tribe's homeland?",
       "What is each spark, and where is it kept?",
